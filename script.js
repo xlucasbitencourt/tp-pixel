@@ -1,6 +1,7 @@
 let quadroDePixel = document.getElementById('pixel-board');
 let corPreto = document.getElementById('cor1');
 let corPaleta = document.querySelectorAll('.color');
+let limpar = document.getElementById('clear-board');
 
 
 // Requisito 4
@@ -35,11 +36,17 @@ for (let index = 0; index < pixel.length; index++) {
     pixel[index].addEventListener('click', pinta);
 }
 
-function pinta (cor) {
+function pinta (cor) { // função realizada graças a pesquisa no w3schools
     const selecao = document.querySelector('.selected');
     const dadosSelecao = window.getComputedStyle(selecao, null);
     let corSelecionada = dadosSelecao.getPropertyValue('background-color');
     cor.target.style.backgroundColor = corSelecionada;
-    console.log(selecao);
 }
-//console.log(pixel);
+
+// Requisito 9
+limpar.addEventListener('click', limparQuadro);
+function limparQuadro () {
+    for (let index = 0; index < pixel.length; index++) {
+        pixel[index].style.backgroundColor = 'white';
+    }
+}

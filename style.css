@@ -26,9 +26,6 @@ body {
     background-color: #FD721D;
 }
 
-#pixel-board {
-}
-
 .pixel { /*Requisito 5*/
     background-color: white;
     border: 1px solid black;

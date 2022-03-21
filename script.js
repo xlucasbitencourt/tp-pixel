@@ -24,9 +24,11 @@ for (let index = 0; index < corPaleta.length; index++) {
 }
 
 function selecionaCor (acao) {
-    for (let index = 0; index < corPaleta.length; index ++) {
-        corPaleta[index].classList.remove('selected');
-    }
+    //for (let index = 0; index < corPaleta.length; index ++) {
+     //   corPaleta[index].classList.remove('selected');
+    //}
+    let selecionado = document.getElementsByClassName('selected')[0];
+    selecionado.classList.remove('selected');
     acao.target.classList.add('selected');
 }
 

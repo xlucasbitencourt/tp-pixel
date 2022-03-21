@@ -1,0 +1,36 @@
+body {
+    background-color: lightgray;
+}
+
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0px;
+    padding: 50px;
+}
+
+#cor1 {
+    background-color: black;
+    /* background-color: #7CFFCB; */
+}
+
+#cor2 {
+    background-color: #791E94;
+}
+
+#cor3 {
+    background-color: #F7D126;
+}
+
+#cor4 {
+    background-color: #FD721D;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    padding: 40px;
+    display: inline-block;
+}

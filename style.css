@@ -1,6 +1,6 @@
 body {
-    background-color: lightgray;
-}
+/*     background-color: lightgray; ativar o final
+ */}
 
 .color { /* Requisito 2*/
     border: 1px solid black; 
@@ -14,7 +14,7 @@ body {
     /* background-color: #7CFFCB; */
 }
 
-#cor2 {
+/* #cor2 {
     background-color: #791E94;
 }
 
@@ -24,7 +24,53 @@ body {
 
 #cor4 {
     background-color: #FD721D;
+} */
+
+#clear-board {
+    font-size: 25px;
+    color: black;
+	width: 500px;
+	height: 50px;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	background-image: linear-gradient(315deg, white 0%, grey 100%);
+	background-size: 200% 100%;
+	background-position: left;
+	background-repeat: no-repeat;
+	transition: 1000ms;
 }
+
+#clear-board:before {
+	color: green;
+	font-size: 25px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 140px;
+	height: 40px;
+	background-color: yellow;
+	background-image: linear-gradient(315deg, yellow 10%, #274060 74%);
+	transition: 800ms;
+}
+
+#clear-board:hover {
+	background-position: right;
+}
+
+#clear-board:hover:before {
+	color: rgba(255,255,255,0.8);
+}
+
+#clear-board:focus {
+	outline: none;
+}
+
+
 
 .pixel { /*Requisito 5*/
     background-color: white;

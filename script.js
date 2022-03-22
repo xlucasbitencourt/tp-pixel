@@ -5,7 +5,7 @@ let limpar = document.getElementById('clear-board');
 let tamanhoQuadro = document.getElementById('board-size');
 let botaoGerar = document.getElementById('generate-board');
 
-// Requisito 12
+// Requisito 12 - Graças ao site CSS tricks
 for (let index = 1; index < corPaleta.length; index++) {
     let aleatorio = Math.floor(Math.random()*16777215).toString(16);
     corPaleta[index].style.backgroundColor = '#' + aleatorio;
@@ -16,7 +16,7 @@ for (let index = 1; index < corPaleta.length; index++) {
 for (let index = 1; index <= 5; index++) {
   let linhaDePixel = document.createElement('div');
   quadroDePixel.appendChild(linhaDePixel);
-  for (index2 = 1; index2 <= 5; index2++) {
+  for (let index2 = 1; index2 <= 5; index2++) {
     let criaPixel = document.createElement('span');
     criaPixel.className = 'pixel';
     linhaDePixel.appendChild(criaPixel);
@@ -49,7 +49,7 @@ function gerarQuadro() {
   for (let index = 1; index <= tamanhoQuadro.value; index++) {
     let linhaDePixel = document.createElement('div');
     quadroDePixel.appendChild(linhaDePixel);
-    for (index2 = 1; index2 <= tamanhoQuadro.value; index2++) {
+    for (let index2 = 1; index2 <= tamanhoQuadro.value; index2++) {
       let criaPixel = document.createElement('span');
       criaPixel.className = 'pixel';
       linhaDePixel.appendChild(criaPixel);

@@ -1,6 +1,6 @@
-body {
-/*     background-color: lightgray; ativar o final
- */}
+/*body {
+     background-color: lightgray; ativar o final
+ }*/
 
 .color { /* Requisito 2*/
     border: 1px solid black; 
@@ -29,7 +29,7 @@ body {
 #clear-board {
     font-size: 25px;
     color: black;
-	width: 500px;
+	width: 600px;
 	height: 50px;
 	cursor: pointer;
 	border: none;
@@ -70,7 +70,37 @@ body {
 	outline: none;
 }
 
+hr {
+	border: 2px solid #274060;
+	width: 600px;
+	margin-inline-start: 0;
+}
 
+#tamanho-quadro {
+	background-color: grey;
+	font-size: 25px;
+	height: 50px;
+	margin: 10px 0;
+	width: 600px;
+	align-items: baseline;
+}
+
+#board-size {
+	width: 70px;
+	height: 20px;
+	background-color: lightskyblue;
+}
+
+#generate-board {
+	font-size: 25px;
+    color: #0fa36b;
+	cursor: pointer;
+	border: none;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	margin-left: 15px;
+}
 
 .pixel { /*Requisito 5*/
     background-color: white;
@@ -79,4 +109,5 @@ body {
     width: 40px;
     padding: 40px;
     display: inline-block;
+	/*border-radius: 100%;*/
   }

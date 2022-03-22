@@ -26,10 +26,13 @@ for (let index = 1; index <= 5; index++) {
 corPreto.classList.add('selected'); // Requisito 6
 
 
-// Requisito 10 - Corrigir a ártir daqui
+// Requisito 10 - Corrigir a partir daqui
 botaoGerar.addEventListener('click', gerarQuadro);
 
 function gerarQuadro() {
+    if (tamanhoQuadro.value === '') {
+        window.alert('Board inválido!');
+    }
   console.log(tamanhoQuadro.value);
   while (quadroDePixel.firstChild) {
     quadroDePixel.removeChild(quadroDePixel.firstChild);

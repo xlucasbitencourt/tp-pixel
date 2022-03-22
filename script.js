@@ -1,39 +1,36 @@
-let quadroDePixel = document.getElementById('pixel-board');
-let corPreto = document.getElementById('preto');
-let corPaleta = document.querySelectorAll('.color');
-let limpar = document.getElementById('clear-board');
-let tamanhoQuadro = document.getElementById('board-size');
-let botaoGerar = document.getElementById('generate-board');
+const quadroDePixel = document.getElementById('pixel-board');
+const corPreto = document.getElementById('preto');
+const corPaleta = document.querySelectorAll('.color');
+const limpar = document.getElementById('clear-board');
+const tamanhoQuadro = document.getElementById('board-size');
+const botaoGerar = document.getElementById('generate-board');
 
 // Requisito 12 - Graças ao site CSS tricks
 for (let index = 1; index < corPaleta.length; index++) {
-    let aleatorio = Math.floor(Math.random()*16777215).toString(16);
-    corPaleta[index].style.backgroundColor = '#' + aleatorio;
+  const aleatorio = Math.floor(Math.random() * 16777215).toString(16);
+  corPaleta[index].style.backgroundColor = `#${aleatorio}`;
 }
-
 
 // Requisito 4
 for (let index = 1; index <= 5; index++) {
-  let linhaDePixel = document.createElement('div');
+  const linhaDePixel = document.createElement('div');
   quadroDePixel.appendChild(linhaDePixel);
   for (let index2 = 1; index2 <= 5; index2++) {
-    let criaPixel = document.createElement('span');
+    const criaPixel = document.createElement('span');
     criaPixel.className = 'pixel';
     linhaDePixel.appendChild(criaPixel);
   }
 }
-
+marcaPixel();
 corPreto.classList.add('selected'); // Requisito 6
 
-
-// Requisito 10 - Corrigir a partir daqui
+// Requisito 10 
 botaoGerar.addEventListener('click', gerarQuadro);
 
 function gerarQuadro() {
     if (tamanhoQuadro.value === '') {
         window.alert('Board inválido!');
     }
-  console.log(tamanhoQuadro.value);
   while (quadroDePixel.firstChild) {
     quadroDePixel.removeChild(quadroDePixel.firstChild);
   }
@@ -47,20 +44,17 @@ function gerarQuadro() {
   }
 
   for (let index = 1; index <= tamanhoQuadro.value; index++) {
-    let linhaDePixel = document.createElement('div');
-    quadroDePixel.appendChild(linhaDePixel);
+    let novoPixel = document.createElement('div');
+    quadroDePixel.appendChild(novoPixel);
     for (let index2 = 1; index2 <= tamanhoQuadro.value; index2++) {
-      let criaPixel = document.createElement('span');
-      criaPixel.className = 'pixel';
-      linhaDePixel.appendChild(criaPixel);
-      console.log(criaPixel);
+      let geraPixel = document.createElement('span');
+      geraPixel.className = 'pixel';
+      novoPixel.appendChild(geraPixel);
+      console.log(geraPixel);
     }
   }
-
+marcaPixel();
 }
-
-// Corrigir até aqui
-
 
 // Requisito 7
 for (let index = 0; index < corPaleta.length; index++) {
@@ -75,9 +69,11 @@ function selecionaCor(acao) {
 
 
 // Requisito 8
-let pixel = document.querySelectorAll('.pixel');
-for (let index = 0; index < pixel.length; index++) {
-  pixel[index].addEventListener('click', pinta);
+function marcaPixel() { // Criado uma função, para que possa ser chamada novamente após geração de quadro personalizado
+  let pixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixel.length; index++) {
+    pixel[index].addEventListener('click', pinta);
+  }
 }
 
 function pinta(cor) { // função realizada graças a pesquisa no w3schools
@@ -85,13 +81,14 @@ function pinta(cor) { // função realizada graças a pesquisa no w3schools
   const dadosSelecao = window.getComputedStyle(selecao, null);
   let corSelecionada = dadosSelecao.getPropertyValue('background-color');
   cor.target.style.backgroundColor = corSelecionada;
-  console.log('teste1');
+  console.log('função pinta');
 }
 
 // Requisito 9
 limpar.addEventListener('click', limparQuadro);
 
 function limparQuadro() {
+  let pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index++) {
     pixel[index].style.backgroundColor = 'white';
   }

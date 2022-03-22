@@ -1,9 +1,15 @@
 let quadroDePixel = document.getElementById('pixel-board');
-let corPreto = document.getElementById('cor1');
+let corPreto = document.getElementById('preto');
 let corPaleta = document.querySelectorAll('.color');
 let limpar = document.getElementById('clear-board');
 let tamanhoQuadro = document.getElementById('board-size');
 let botaoGerar = document.getElementById('generate-board');
+
+// Requisito 12
+for (let index = 1; index < corPaleta.length; index++) {
+    let aleatorio = Math.floor(Math.random()*16777215).toString(16);
+    corPaleta[index].style.backgroundColor = '#' + aleatorio;
+}
 
 
 // Requisito 4

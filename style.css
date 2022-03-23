@@ -109,5 +109,6 @@ hr {
     width: 40px;
     padding: 40px;
     display: inline-block;
+	margin-top: -4px;
 	/*border-radius: 100%;*/
   }

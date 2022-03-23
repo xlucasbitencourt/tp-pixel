@@ -10,7 +10,8 @@ function pinta(cor) { // função realizada graças a pesquisa no w3schools
   const selecao = document.querySelector('.selected');
   const dadosSelecao = window.getComputedStyle(selecao, null);
   const corSelecionada = dadosSelecao.getPropertyValue('background-color');
-  cor.target.style.backgroundColor = corSelecionada;
+  const quadro = cor;
+  quadro.target.style.backgroundColor = corSelecionada;
   console.log('função pinta');
 }
 // Requisito 8
@@ -43,18 +44,6 @@ corPreto.classList.add('selected'); // Requisito 6
 
 // Requisito 10
 function gerarQuadro() {
-  if (tamanhoQuadro.value === '') {
-    window.alert('Board inválido!');
-  }
-  while (quadroDePixel.firstChild) {
-    quadroDePixel.removeChild(quadroDePixel.firstChild);
-  }
-  if (tamanhoQuadro.value < 5) { // Requisito 11 (Os dois IF)
-    tamanhoQuadro.value = 5;
-  }
-  if (tamanhoQuadro.value > 50) {
-    tamanhoQuadro.value = 50;
-  }
   for (let index = 1; index <= tamanhoQuadro.value; index += 1) {
     const novoPixel = document.createElement('div');
     quadroDePixel.appendChild(novoPixel);
@@ -67,7 +56,23 @@ function gerarQuadro() {
   marcaPixel();
 }
 
-botaoGerar.addEventListener('click', gerarQuadro);
+function confereQuadro() {
+  if (tamanhoQuadro.value === '') {
+    window.alert('Board inválido!');
+  }
+  while (quadroDePixel.firstChild) {
+    quadroDePixel.removeChild(quadroDePixel.firstChild);
+  }
+  if (tamanhoQuadro.value < 5) { // Requisito 11 (Os dois IF)
+    tamanhoQuadro.value = 5;
+  }
+  if (tamanhoQuadro.value > 50) {
+    tamanhoQuadro.value = 50;
+  }
+  gerarQuadro();
+}
+
+botaoGerar.addEventListener('click', confereQuadro);
 
 // Requisito 7
 function selecionaCor(acao) {

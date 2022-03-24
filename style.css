@@ -1,96 +1,96 @@
-.color { /* Requisito 2*/
-    border: 1px solid black; 
-    display: inline-block;
-    margin: 0px;
-    padding: 50px;
+.color { /* Requisito 2 */
+  border: 1px solid black;
+  display: inline-block;
+  margin: 0;
+  padding: 50px;
 }
 
-#preto {
-    background-color: black; /* Requisito 3 */
+#preto { /* Requisito 3 */
+  background-color: black;
 }
 
 #clear-board {
-    font-size: 25px;
-    color: black;
-	width: 600px;
-	height: 50px;
-	cursor: pointer;
-	border: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: white;
-	background-image: linear-gradient(315deg, white 0%, grey 100%);
-	background-size: 200% 100%;
-	background-position: left;
-	background-repeat: no-repeat;
-	transition: 1000ms;
+  font-size: 25px;
+  color: black;
+  width: 600px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-image: linear-gradient(315deg, white 0%, grey 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 1000ms;
 }
 
 #clear-board:before {
-	color: green;
-	font-size: 25px;
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 140px;
-	height: 40px;
-	background-color: yellow;
-	background-image: linear-gradient(315deg, yellow 10%, #274060 74%);
-	transition: 800ms;
+  color: green;
+  font-size: 25px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 40px;
+  background-color: yellow;
+  background-image: linear-gradient(315deg, yellow 10%, #274060 74%);
+  transition: 800ms;
 }
 
 #clear-board:hover {
-	background-position: right;
+  background-position: right;
 }
 
 #clear-board:hover:before {
-	color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #clear-board:focus {
-	outline: none;
+  outline: none;
 }
 
 hr {
-	border: 2px solid #274060;
-	width: 600px;
-	margin-inline-start: 0;
+  border: 2px solid #274060;
+  width: 600px;
+  margin-inline-start: 0;
 }
 
 #tamanho-quadro {
-	background-color: grey;
-	font-size: 25px;
-	height: 50px;
-	margin: 10px 0;
-	width: 600px;
-	align-items: baseline;
+  background-color: grey;
+  font-size: 25px;
+  height: 50px;
+  margin: 10px 0;
+  width: 600px;
+  align-items: baseline;
 }
 
 #board-size {
-	width: 70px;
-	height: 20px;
-	background-color: lightskyblue;
+  width: 70px;
+  height: 20px;
+  background-color: lightskyblue;
 }
 
 #generate-board {
-	font-size: 25px;
-    color: #0fa36b;
-	cursor: pointer;
-	border: none;
-	align-items: center;
-	justify-content: center;
-	background-color: black;
-	margin-left: 15px;
+  font-size: 25px;
+  color: #0fa36b;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin-left: 15px;
 }
 
-.pixel { /*Requisito 5*/
-    background-color: white;
-    border: 1px solid black;
-    height: 40px;
-    width: 40px;
-    padding: 40px;
-    display: inline-block;
-	margin-top: -4px;
-  }
+.pixel { /* Requisito 5 */
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  padding: 40px;
+  display: inline-block;
+  margin-top: -4px;
+}

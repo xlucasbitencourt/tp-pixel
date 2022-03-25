@@ -12,7 +12,6 @@ function pinta(cor) { // função realizada graças a pesquisa no w3schools
   const corSelecionada = dadosSelecao.getPropertyValue('background-color');
   const quadro = cor;
   quadro.target.style.backgroundColor = corSelecionada;
-  console.log('função pinta');
 }
 // Requisito 8
 function marcaPixel() { // Criado uma função, para que possa ser chamada novamente após geração de quadro personalizado

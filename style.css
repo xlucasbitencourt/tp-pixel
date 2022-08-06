@@ -85,6 +85,15 @@ hr {
   margin-left: 15px;
 }
 
+#pixel-board {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
 .pixel { /* Requisito 5 */
   background-color: white;
   border: 1px solid black;

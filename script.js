@@ -33,6 +33,7 @@ for (let index = 1; index <= 5; index += 1) {
   quadroDePixel.appendChild(linhaDePixel);
   for (let index2 = 1; index2 <= 5; index2 += 1) {
     const criaPixel = document.createElement('span');
+    linhaDePixel.className = 'row';
     criaPixel.className = 'pixel';
     linhaDePixel.appendChild(criaPixel);
   }
@@ -45,6 +46,7 @@ corPreto.classList.add('selected'); // Requisito 6
 function gerarQuadro() {
   for (let index = 1; index <= tamanhoQuadro.value; index += 1) {
     const novoPixel = document.createElement('div');
+    novoPixel.className = 'row';
     quadroDePixel.appendChild(novoPixel);
     for (let index2 = 1; index2 <= tamanhoQuadro.value; index2 += 1) {
       const geraPixel = document.createElement('span');
